@@ -1,0 +1,55 @@
+<openerp>
+	<data>
+
+		<!--- vista Formulario -->
+
+		<record model="ir.ui.view" id="instructor_form_view">
+			<field name="name">instructor.form</field>
+			<field name="model">res.partner</field>
+			<field name="arch" type="xml">
+				<form string="Instructor Form">
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="email" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!--- vista tree -->
+
+
+		<record model="ir.ui.view" id="tree_form_view">
+			<field name="name">instructor.tree</field>
+			<field name="model">res.partner</field>
+			<field name="arch" type="xml">
+				<tree string="Instructor Tree"> 
+                    
+					<field name="name" />
+					<field name="email" />
+				</tree>
+			</field>
+		</record>
+
+
+		<!-- Menu de la izquierda, meto nuevo: "Instructor" -->
+
+
+		<record model="ir.actions.act_window" id="instructor_list_action">
+
+			<field name="name">Instructors</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_type">form</field>		
+			<field name="view_mode">tree,form</field>
+
+		</record>
+
+		<menuitem id="instructor_menu" name="Instructor"
+			parent="openacademy.openacademy_menu" action="instructor_list_action" />
+
+
+	</data>
+</openerp>
+           

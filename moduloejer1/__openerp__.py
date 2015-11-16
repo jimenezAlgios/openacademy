@@ -21,22 +21,24 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'board'],
+    'depends': ['base', 'openacademy'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'security/security.xml',
-        'security/ir.model.access.csv',
-        'templates.xml',
-        'views/openacademy.xml'
-        'views/partner.xml'
-        'views/session_workflow.xml',
-        'views/session_board.xml',
-        'reports.xml'
+        #'security/security.xml',
+        #'security/ir.model.access.csv',
+        #'templates.xml',
+        #'views/openacademy.xml'
+        ##'views/partner.xml'
+        #'views/session_workflow.xml',
+        #'views/session_board.xml',
+        #'reports.xml'
+        'views/instructor.xml'
+        
+        
+        
+        
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo.xml',
-    ],
+ 
 }
