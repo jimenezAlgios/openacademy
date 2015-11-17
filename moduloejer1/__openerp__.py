@@ -34,7 +34,8 @@
         #'views/session_workflow.xml',
         #'views/session_board.xml',
         #'reports.xml'
-        'views/instructor.xml'
+        'views/instructor.xml',
+        'views/category.xml'
         
         
         
