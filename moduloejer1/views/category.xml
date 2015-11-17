@@ -9,8 +9,8 @@
             <field name="model">openacademy.course.category</field>
             <field name="arch" type="xml">
                 <tree string="Category Tree">                    
-                    <field name="codigo" />
-                    <field name="nombre" />
+                    <field name="code" />
+                    <field name="name" />
                 </tree>
             </field>
         </record>   
@@ -24,9 +24,9 @@
                 <form string="Category Form">
                     <sheet>
                         <group>
-                            <field name="codigo" />
-                            <field name="nombre" />
-                            <field name="descripcion" />
+                            <field name="code" />
+                            <field name="name" />
+                            <field name="description" />
                         </group>
                     </sheet>
                 </form>
