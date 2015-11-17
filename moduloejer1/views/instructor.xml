@@ -43,8 +43,11 @@
 			<field name="res_model">res.partner</field>
 			<field name="view_type">form</field>		
 			<field name="view_mode">tree,form</field>
+			<field name="domain">[('instructor','=',True)]</field>
 
 		</record>
+		
+	
 
 		<menuitem id="instructor_menu" name="Instructor"
 			parent="openacademy.openacademy_menu" action="instructor_list_action" />
