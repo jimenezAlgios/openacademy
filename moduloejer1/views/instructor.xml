@@ -20,7 +20,6 @@
 
 		<!--- vista tree -->
 
-
 		<record model="ir.ui.view" id="tree_form_view">
 			<field name="name">instructor.tree</field>
 			<field name="model">res.partner</field>
@@ -35,6 +34,8 @@
 
 
 		<!-- Menu de la izquierda, meto nuevo: "Instructor" -->
+		
+		          <!--  accion poner default instrutctor a true-->
 
 
 		<record model="ir.actions.act_window" id="instructor_list_action">
@@ -44,10 +45,14 @@
 			<field name="view_type">form</field>		
 			<field name="view_mode">tree,form</field>
 			<field name="domain">[('instructor','=',True)]</field>
+			<field name="context">{'default_instructor':True}</field> 
 
 		</record>
 		
-	
+	  
+	   
+	   
+	   
 
 		<menuitem id="instructor_menu" name="Instructor"
 			parent="openacademy.openacademy_menu" action="instructor_list_action" />
@@ -55,4 +60,5 @@
 
 	</data>
 </openerp>
+
            
