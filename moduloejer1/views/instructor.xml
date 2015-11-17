@@ -48,11 +48,6 @@
 			<field name="context">{'default_instructor':True}</field> 
 
 		</record>
-		
-	  
-	   
-	   
-	   
 
 		<menuitem id="instructor_menu" name="Instructor"
 			parent="openacademy.openacademy_menu" action="instructor_list_action" />

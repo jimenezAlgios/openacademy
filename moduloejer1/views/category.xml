@@ -1,0 +1,55 @@
+<openerp>
+    <data>
+    
+    
+    <!--- vista tree ejer 2-->
+
+        <record model="ir.ui.view" id="tree_form_view">
+            <field name="name">category.tree</field>
+            <field name="model">openacademy.course.category</field>
+            <field name="arch" type="xml">
+                <tree string="Category Tree">                    
+                    <field name="codigo" />
+                    <field name="nombre" />
+                </tree>
+            </field>
+        </record>   
+    
+    <!--- vista Formulario ejer 2 -->
+
+        <record model="ir.ui.view" id="category_form_view">
+            <field name="name">category.form</field>
+            <field name="model">openacademy.course.category</field>
+            <field name="arch" type="xml">
+                <form string="Category Form">
+                    <sheet>
+                        <group>
+                            <field name="codigo" />
+                            <field name="nombre" />
+                            <field name="descripcion" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+    
+    <!--  Aqui se crea una entrada nueva de menú Open Academy > Configuration > Categories -->
+    
+    <record model="ir.actions.act_window" id="category_list_action">
+
+            <field name="name">Categories</field>
+            <field name="res_model">openacademy.course.category</field>
+            <field name="view_type">form</field>        
+            <field name="view_mode">tree,form</field>
+            
+    </record>
+      
+    <menuitem id="category_menu" name="Category"
+                  parent="openacademy.configuration_menu"
+                  action="category_list_action"/>
+    
+    
+    
+    </data>
+</openerp>
