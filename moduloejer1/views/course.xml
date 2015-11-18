@@ -1,0 +1,29 @@
+<openerp>
+    <data>
+    
+        <!-- Para heredar la vista form y la vista tree de openacademy.course para incluir el nuevo campo: se pone el filed name: "inherit_id" ref="openacademy.course_form_view" -->
+        
+	  <record model="ir.ui.view" id="course_form_view">
+	            <field name="name">course.form</field>
+	            <field name="model">openacademy.course</field>
+	            <field name="inherit_id" ref="openacademy.course_form_view" />
+	            <field name="arch" type="xml">
+	                <xpath expr="//field[@name='responsible_id']" position="after">
+	                    <field name="category_id" />
+	                </xpath>
+	            </field>
+	  </record>
+	
+	  <record model="ir.ui.view" id="course_tree_view">
+	            <field name="name">course.tree</field>
+	            <field name="model">openacademy.course</field>
+	            <field name="inherit_id" ref="openacademy.course_tree_view" />
+	            <field name="arch" type="xml">
+	                <field name="responsible_id" position="after">
+	                    <field name="category_id" />
+	                </field>
+	            </field>
+	  </record>
+  
+    </data>
+</openerp>
