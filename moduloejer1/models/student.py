@@ -5,7 +5,7 @@ from openerp import models,fields
 
 class Student (models.Model):
     #desde student se podra elegir curso, entiendo que hay que hereedar
-        _inherit = 'openacademy.course'
+        _inherit = 'openacademy.tipoestudiante'
         
         name = fields.Char(required=True)
         description = fields.Text()
