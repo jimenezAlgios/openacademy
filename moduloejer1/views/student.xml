@@ -1,0 +1,28 @@
+<openerp>
+    <data>      
+      <record model="ir.ui.view" id="student_form_view">
+                <field name="name">student.form</field>
+                <field name="model">openacademy.student</field>
+                <field name="inherit_id" ref="openacademy.student_form_view" />
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='responsible_id']" position="after">
+                        <field name="tipoestudiante_id" />
+                    </xpath>
+                </field>
+      </record>
+    
+      <record model="ir.ui.view" id="student_tree_view">
+                <field name="name">student.tree</field>
+                <field name="model">openacademy.student</field>
+                <field name="inherit_id" ref="openacademy.student_tree_view" />
+                <field name="arch" type="xml">
+                    <field name="responsible_id" position="after">
+                        <field name="tipoestudiante_id" />
+                    </field>
+                </field>
+      </record>   
+      
+     
+            
+    </data>
+</openerp>

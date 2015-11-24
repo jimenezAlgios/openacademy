@@ -1,6 +1,5 @@
 <openerp>
-    <data>
-    
+    <data> 
         <!-- Para heredar la vista form y la vista tree de openacademy.course para incluir el nuevo campo: se pone el filed name: "inherit_id" ref="openacademy.course_form_view" -->
         
 	  <record model="ir.ui.view" id="course_form_view">
@@ -23,7 +22,6 @@
 	                    <field name="category_id" />
 	                </field>
 	            </field>
-	  </record>
-  
+	  </record>	  	    
     </data>
 </openerp>

@@ -1,0 +1,50 @@
+<openerp>
+    <data>
+        <!--- vista tree-->
+
+        <record model="ir.ui.view" id="tree_form_view">
+            <field name="name">category.tree</field>
+            <field name="model">openacademy.course.category</field>
+            <field name="arch" type="xml">
+                <tree string="Category Tree">                    
+                    <field name="code" />
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>   
+    
+    <!--- vista Formulario -->
+
+        <record model="ir.ui.view" id="tipoestudiante_form_view">
+            <field name="name">tipoestudiante.form</field>
+            <field name="model">openacademy.student.tipoestudiante</field>
+            <field name="arch" type="xml">
+                <form string="tipoestudiante Form">
+                    <sheet>
+                        <group>                           
+                            <field name="name" />
+                            <field name="description" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+    
+    <!--  Aqui se crea una entrada nueva de menú Open Academy > Configuration > tipoestudiante -->
+    
+    <record model="ir.actions.act_window" id="tipoestudiante_list_action">
+
+            <field name="name">tipoestudiante</field>
+            <field name="res_model">openacademy.student.tipoestudiante</field>
+            <field name="view_type">form</field>        
+            <field name="view_mode">tree,form</field>
+            
+    </record>
+      
+    <menuitem id="tipoestudiante_menu" name="Tipoestudiante"
+                  parent="openacademy.configuration_menu"
+                  action="tipoestudiante_list_action"/>
+   
+    </data>
+</openerp>

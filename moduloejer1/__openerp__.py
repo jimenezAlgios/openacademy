@@ -35,12 +35,9 @@
         #'views/session_board.xml',
         #'reports.xml'
         'views/instructor.xml',
-        'views/category.xml'
+        'views/category.xml',
         'views/course.xml'
-        
-        
-        
-        
+        'views/student.xml'      
     ],
  
 }
