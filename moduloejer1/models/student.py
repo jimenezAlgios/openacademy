@@ -12,6 +12,4 @@ class Student (models.Model):
         
         
         tipoestudiante_id = fields.Many2one('openacademy.student.tipoestudiante', string="tipoestudiante")
-        
-        
-        
+         
