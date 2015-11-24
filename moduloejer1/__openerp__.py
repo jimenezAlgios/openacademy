@@ -36,7 +36,7 @@
         #'reports.xml'
         'views/instructor.xml',
         'views/category.xml',
-        'views/course.xml'
+        'views/course.xml',
         'views/student.xml'      
     ],
  
