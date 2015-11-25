@@ -19,7 +19,7 @@ class Student (models.Model):
     student = fields.Boolean("Student", default=False)
     
     #Se pone un campo descripcion ( mirar si res.partne ya tiene uno, si lo tiene se quita)
-    #description = fields.Text()   
+    description = fields.Text()   
                   
     #un estudiante puede tener solo un tipo  A, B o C
     #tipoestudiante_id = fields.Many2one('openacademy.student', string="Student")
