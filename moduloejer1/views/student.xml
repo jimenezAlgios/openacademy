@@ -1,28 +1,57 @@
 <openerp>
     <data>      
-      <record model="ir.ui.view" id="student_form_view">
-                <field name="name">student.form</field>
-                <field name="model">openacademy.student</field>
-                <field name="inherit_id" ref="openacademy.student_form_view" />
-                <field name="arch" type="xml">
-                    <xpath expr="//field[@name='responsible_id']" position="after">
-                        <field name="tipoestudiante_id" />
-                    </xpath>
-                </field>
-      </record>
-    
-      <record model="ir.ui.view" id="student_tree_view">
-                <field name="name">student.tree</field>
-                <field name="model">openacademy.student</field>
-                <field name="inherit_id" ref="openacademy.student_tree_view" />
-                <field name="arch" type="xml">
-                    <field name="responsible_id" position="after">
-                        <field name="tipoestudiante_id" />
-                    </field>
-                </field>
-      </record>   
-      
-     
-            
+    <!--- vista Formulario -->
+
+        <record model="ir.ui.view" id="student_form_view">
+            <field name="name">student.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Student Form">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="email" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--- vista tree -->
+
+        <record model="ir.ui.view" id="tree_form_view">
+            <field name="name">student.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Student Tree"> 
+                    <!-- name y email son las que yo quiero que se vean de todas las que hay en partner ( hay un monton ) -->
+                    <field name="name" />
+                    <field name="email" />
+                    <!-- tipoestudiante es la que yo he creado y quiero que se vea, haciendo antes el inherit lo q se hace es meterse el "tipoestudiante" en partner -->
+                    <field name="tipoestudiante"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- se pone Student en el menu ????????????????????? -->      
+        
+        <record model="ir.actions.act_window" id="student_list_action">
+
+            <field name="name">Student</field>
+            <!-- hereda de res.partner -->
+            <field name="res_model">res.partner</field>
+            <!-- pone por defecto la vista formulario (form) -->
+            <field name="view_type">form</field>
+            <!-- coge las vistas de tree y form -->        
+            <field name="view_mode">tree,form</field>
+            <!-- Por defecto solo salen los students y no todos los partners-->
+            <field name="domain">[('student','=',True)]</field>         
+            <field name="context">{'default_student':True}</field> 
+
+        </record>
+
+        <menuitem id="student_menu" name="Student"
+            parent="openacademy.openacademy_menu" action="student_list_action" />
+        
     </data>
 </openerp>

@@ -35,7 +35,7 @@
 
 		<!-- Menu de la izquierda, meto nuevo: "Instructor" -->
 		
-		          <!--  accion poner default instrutctor a true-->
+	    <!--  accion poner default instrutctor a true-->
 
 
 		<record model="ir.actions.act_window" id="instructor_list_action">
