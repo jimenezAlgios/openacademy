@@ -11,7 +11,7 @@ class Student (models.Model):
     name = fields.Char(required=True)
     
     # Se crea un campo que se llama tipoestudiante, es un desplegable que es de tipo selection
-    tipoestudiante = fields.Selection()
+    tipoestudiante = fields.Selection()   
     
     # se crea checkbox a false
     student = fields.Boolean("Student", default=False)
