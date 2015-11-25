@@ -39,7 +39,7 @@
 
             <field name="name">Student</field>
             <!-- hereda de res.partner -->
-            <!-- <field name="res_model">res.partner</field> -->
+             <field name="res_model">res.partner</field> 
             <!-- pone por defecto la vista formulario (form) -->
             <field name="view_type">form</field>
             <!-- coge las vistas de tree y form -->        
@@ -47,6 +47,13 @@
             <!-- Por defecto solo salen los students y no todos los partners-->
             <field name="domain">[('student','=',True)]</field>         
             <field name="context">{'default_student':True}</field> 
+            <!-- campo de la accion que tiene una lista de "ids" ( abre una SERIE DE vistas )
+                                   eval="[(5, 0, 0)-> (5)borra todo, (0)add nuevo enlace
+                                   toda la info sobre mas nuemeros:
+                                   línea 3750: "odoo8.0"-->
+            <field name="view_ids" eval="[(5, 0, 0),
+             (0, 0, {'view_mode': 'tree', 'view_id': ref('tree_form_view')}),
+             (0, 0, {'view_mode': 'form', 'view_id': ref('student_form_view')})]"/>
 
         </record>
 
