@@ -5,7 +5,6 @@ encoding//moduloejer1/models/__init__.py=utf-8
 encoding//moduloejer1/models/category.py=utf-8
 encoding//moduloejer1/models/course.py=utf-8
 encoding//moduloejer1/models/student.py=utf-8
-encoding//moduloejer1/models/tipoestudiante.py=utf-8
 encoding//openacademy/__init__.py=utf-8
 encoding//openacademy/__openerp__.py=utf-8
 encoding//openacademy/models.py=utf-8

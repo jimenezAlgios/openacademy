@@ -12,8 +12,7 @@ class Student (models.Model):
     
     # Se crea un campo que se llama tipoestudiante, es un desplegable que es de tipo selection
     tipoestudiante = fields.Selection([('A'),('B'),('C')], string='Tipo', required=True) 
-    
-    
+       
     #fields.Selection([('open', 'New'), ('confirm', 'Validated')], string='Status', required=True, readonly=True, copy=False, default='open')  
     
     # se crea checkbox a false
@@ -21,4 +20,7 @@ class Student (models.Model):
     
     #Se pone un campo descripcion ( mirar si res.partne ya tiene uno, si lo tiene se quita)
     description = fields.Text()   
-        
+                  
+    #un estudiante puede tener solo un tipo  A, B o C
+    #tipoestudiante_id = fields.Many2one('openacademy.student', string="Student")
+    
