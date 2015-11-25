@@ -37,8 +37,7 @@
         'views/instructor.xml',
         'views/category.xml',
         'views/course.xml',
-        'views/student.xml',
-        'views/tipoestudiante.xml'      
+        'views/student.xml'         
     ],
  
 }
