@@ -4,7 +4,7 @@
 
         <record model="ir.ui.view" id="student_form_view">
             <field name="name">student.form</field>
-            <field name="model">res.partner</field>
+            <field name="model">openacademy.student</field>
             <field name="arch" type="xml">
                 <form string="Student Form">
                     <sheet>
@@ -21,7 +21,8 @@
 
         <record model="ir.ui.view" id="tree_form_view">
             <field name="name">student.tree</field>
-            <field name="model">res.partner</field>
+            <!-- he cambiado res.partner por openacademy.student y arriba tb  -->
+            <field name="model">openacademy.student</field>
             <field name="arch" type="xml">
                 <tree string="Student Tree"> 
                     <!-- name y email son las que yo quiero que se vean de todas las que hay en partner ( hay un monton ) -->
